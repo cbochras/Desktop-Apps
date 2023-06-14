@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Desktop App GUI</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <button>File</button>
+      <button>Menu</button>
+      <button>View System</button>
+      <button>Preferences</button>
+      <button>Help</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <label>Pre Processing</label>
+      <button>Material Properties</button>
+      <button>Boundary conditions </button>
+    </section>
+    <section class="section">
+      <label>Optimization Methods</label>
+      <button>BESO</button>
+      <button>PROP</button>
+      <button>OC</button>
+    </section>
+    <section class="section">
+      <label>Optimization Parameters:</label>
+      <input type="number" placeholder="R">
+      <input type="number" placeholder="Volume Fraction">
+    </section>
+    <section class="section">
+      <label>Additive Manufacturing Constraints:</label>
+      <input type="number" placeholder="Minimum Feature Size">
+      <input type="number" placeholder="Overhang Angle">
+      <button>Residual Stress Spots</button>
+    </section>
+    <section class="section">
+      <div class="icon-button" id="run-button">
+        <i class="fas fa-play"></i>
+      </div>
+      <div class="icon-button" id="pause-button">
+        <i class="fas fa-pause"></i>
+      </div>
+      <div class="icon-button" id="save-button">
+        <i class="fas fa-save"></i>
+      </div>
+    </section>
+	<section class="section">
+     <div class="design-display">
+      <div class="uploaded-design">
+       <h3>Design Domain</h3>
+       <!-- Uploaded design content here -->
+      </div>
+      <div class="converted-design">
+       <h3>Optimum Topology</h3>
+       <!-- Converted design content here -->
+      </div>
+     </div>
+    </section>
+	<section class="section">
+     <div class="console">
+      <h3>Console</h3>
+      <textarea id="console-input" rows="4" placeholder="Enter commands..."></textarea>
+      <button id="console-submit">Submit</button>
+     </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="status">
+      <label>Total Node:</label>
+      <label>Unit:</label>
+      <label>Current Iteration Number:</label>
+    </div>
+  </footer>
+
+</body>
+</html>
